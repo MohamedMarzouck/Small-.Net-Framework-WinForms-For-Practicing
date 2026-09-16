@@ -42,6 +42,11 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.gbTicTacToe = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -51,6 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.gbTicTacToe.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -95,93 +101,120 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(537, 93);
+            this.pictureBox1.Image = global::WindowsFormsApps.Properties.Resources.question_mark_96;
+            this.pictureBox1.Location = new System.Drawing.Point(8, 63);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(156, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Tag = "?";
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(762, 94);
+            this.pictureBox2.Image = global::WindowsFormsApps.Properties.Resources.question_mark_96;
+            this.pictureBox2.Location = new System.Drawing.Point(227, 63);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(156, 75);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Tag = "?";
+            this.pictureBox2.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(972, 94);
+            this.pictureBox3.Image = global::WindowsFormsApps.Properties.Resources.question_mark_96;
+            this.pictureBox3.Location = new System.Drawing.Point(447, 63);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(156, 75);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Tag = "?";
+            this.pictureBox3.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(537, 262);
+            this.pictureBox4.Image = global::WindowsFormsApps.Properties.Resources.question_mark_96;
+            this.pictureBox4.Location = new System.Drawing.Point(8, 231);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(156, 75);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 8;
             this.pictureBox4.TabStop = false;
             this.pictureBox4.Tag = "?";
+            this.pictureBox4.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // pictureBox5
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(762, 262);
+            this.pictureBox5.Image = global::WindowsFormsApps.Properties.Resources.question_mark_96;
+            this.pictureBox5.Location = new System.Drawing.Point(227, 231);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(156, 75);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 9;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Tag = "?";
+            this.pictureBox5.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // pictureBox6
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(972, 262);
+            this.pictureBox6.Image = global::WindowsFormsApps.Properties.Resources.question_mark_96;
+            this.pictureBox6.Location = new System.Drawing.Point(447, 231);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(156, 75);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 10;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Tag = "?";
+            this.pictureBox6.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // pictureBox7
             // 
-            this.pictureBox7.Location = new System.Drawing.Point(537, 430);
+            this.pictureBox7.Image = global::WindowsFormsApps.Properties.Resources.question_mark_96;
+            this.pictureBox7.Location = new System.Drawing.Point(8, 398);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(156, 75);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 11;
             this.pictureBox7.TabStop = false;
             this.pictureBox7.Tag = "?";
+            this.pictureBox7.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // pictureBox8
             // 
-            this.pictureBox8.Location = new System.Drawing.Point(762, 430);
+            this.pictureBox8.Image = global::WindowsFormsApps.Properties.Resources.question_mark_96;
+            this.pictureBox8.Location = new System.Drawing.Point(227, 398);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(156, 75);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 12;
             this.pictureBox8.TabStop = false;
             this.pictureBox8.Tag = "?";
+            this.pictureBox8.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // pictureBox9
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(972, 430);
+            this.pictureBox9.Image = global::WindowsFormsApps.Properties.Resources.question_mark_96;
+            this.pictureBox9.Location = new System.Drawing.Point(447, 398);
             this.pictureBox9.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(156, 75);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 13;
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Tag = "?";
+            this.pictureBox9.Click += new System.EventHandler(this.PictureBox_Click);
             // 
             // button1
             // 
@@ -194,6 +227,66 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Restart Game";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // gbTicTacToe
+            // 
+            this.gbTicTacToe.Controls.Add(this.pictureBox1);
+            this.gbTicTacToe.Controls.Add(this.pictureBox2);
+            this.gbTicTacToe.Controls.Add(this.pictureBox7);
+            this.gbTicTacToe.Controls.Add(this.pictureBox8);
+            this.gbTicTacToe.Controls.Add(this.pictureBox9);
+            this.gbTicTacToe.Controls.Add(this.pictureBox3);
+            this.gbTicTacToe.Controls.Add(this.pictureBox4);
+            this.gbTicTacToe.Controls.Add(this.pictureBox5);
+            this.gbTicTacToe.Controls.Add(this.pictureBox6);
+            this.gbTicTacToe.ForeColor = System.Drawing.Color.Gray;
+            this.gbTicTacToe.Location = new System.Drawing.Point(551, 32);
+            this.gbTicTacToe.Name = "gbTicTacToe";
+            this.gbTicTacToe.Size = new System.Drawing.Size(611, 532);
+            this.gbTicTacToe.TabIndex = 15;
+            this.gbTicTacToe.TabStop = false;
+            this.gbTicTacToe.Text = "TicTacToe";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(554, 612);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 30);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Player 1:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(667, 612);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(27, 30);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "0";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(938, 612);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(109, 30);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "Player 2:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1051, 612);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(27, 30);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "0";
             // 
             // TicTacToe
             // 
@@ -201,16 +294,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1244, 675);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.gbTicTacToe);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -220,6 +309,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "TicTacToe";
             this.Text = "TicTacToe";
+            this.Load += new System.EventHandler(this.gbTicTacToe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -229,6 +319,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.gbTicTacToe.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +341,10 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox gbTicTacToe;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }

@@ -22,10 +22,10 @@ namespace WindowsFormsApps
             Form frm = new PizzaApp();
             frm.Show();
         }
-
-        private void HoverEvent(object sender, EventArgs e)
+        private void btnTicTacToe_Click(object sender, EventArgs e)
         {
-
+            Form frm = new TicTacToe();
+            frm.Show();
         }
     }
 }
