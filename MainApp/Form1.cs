@@ -27,5 +27,17 @@ namespace WindowsFormsApps
             Form frm = new TicTacToe();
             frm.Show();
         }
+
+        private void btnTimer_Click(object sender, EventArgs e)
+        {
+            Form frm = new Timer();
+            frm.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Form frm = new ListView();
+            frm.Show();
+        }
     }
 }

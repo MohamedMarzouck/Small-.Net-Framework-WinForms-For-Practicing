@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListView.Designer.cs">
+      <DependentUpon>ListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainApp\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,15 @@
     <Compile Include="TicTacToe\TicTacToe.Designer.cs">
       <DependentUpon>TicTacToe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Timer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timer.Designer.cs">
+      <DependentUpon>Timer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ListView.resx">
+      <DependentUpon>ListView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainApp\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +99,9 @@
     </Compile>
     <EmbeddedResource Include="TicTacToe\TicTacToe.resx">
       <DependentUpon>TicTacToe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timer.resx">
+      <DependentUpon>Timer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -106,6 +124,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\X.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Girl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

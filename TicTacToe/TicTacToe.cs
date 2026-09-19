@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,9 +29,9 @@ namespace WindowsFormsApps
             public enPlayer CurrentPlayer;
             public enWinner Winner;
             public short MoveCount;
-            public bool GameOver;
+            public bool GameOver;                                       // TODO - Defensive Programming;
 
-            stGameStatus(enPlayer DefaultPlayer = enPlayer.Player1)
+            stGameStatus(enPlayer DefaultPlayer = enPlayer.Player1)     // At least one parameter;
             {
                 CurrentPlayer = DefaultPlayer;
                 Winner = enWinner.Inprogress;
@@ -50,7 +52,7 @@ namespace WindowsFormsApps
         {
             if (Box1.Tag.ToString() != "?" && Box1.Tag == Box2.Tag && Box1.Tag == Box3.Tag)
             {
-                EndGame(Box1, Box2, Box3);
+                Box1.BackColor = Box2.BackColor = Box3.BackColor = Color.DarkRed;
                 return true;
             }
 
@@ -59,13 +61,13 @@ namespace WindowsFormsApps
         private bool CheckWinner()
         {
             if (CheckValues(pictureBox1, pictureBox2, pictureBox3)) return true;
-            else if (CheckValues(pictureBox4, pictureBox5, pictureBox6)) return true;
-            else if (CheckValues(pictureBox7, pictureBox8, pictureBox9)) return true;
-            else if (CheckValues(pictureBox1, pictureBox4, pictureBox7)) return true;
-            else if (CheckValues(pictureBox2, pictureBox5, pictureBox8)) return true;
-            else if (CheckValues(pictureBox3, pictureBox6, pictureBox9)) return true;
-            else if (CheckValues(pictureBox1, pictureBox5, pictureBox9)) return true;
-            else if (CheckValues(pictureBox3, pictureBox5, pictureBox7)) return true;
+            if (CheckValues(pictureBox4, pictureBox5, pictureBox6)) return true;
+            if (CheckValues(pictureBox7, pictureBox8, pictureBox9)) return true;
+            if (CheckValues(pictureBox1, pictureBox4, pictureBox7)) return true;
+            if (CheckValues(pictureBox2, pictureBox5, pictureBox8)) return true;
+            if (CheckValues(pictureBox3, pictureBox6, pictureBox9)) return true;
+            if (CheckValues(pictureBox1, pictureBox5, pictureBox9)) return true;
+            if (CheckValues(pictureBox3, pictureBox5, pictureBox7)) return true;
 
             return false;
         }
@@ -91,9 +93,7 @@ namespace WindowsFormsApps
                     {
                         WinPlayer1++;
                         GetResult();
-                        GameStatus.Winner = enWinner.Player1;
-                        label4.Text = "Player 1";
-                        gbTicTacToe.Enabled = false;
+                        EndGame(enWinner.Player1);
                         return;
                     }
                     GameStatus.CurrentPlayer = enPlayer.Player2;
@@ -107,9 +107,7 @@ namespace WindowsFormsApps
                     {
                         WinPlayer2++;
                         GetResult();
-                        GameStatus.Winner = enWinner.Player2;
-                        label4.Text = "Player 2";
-                        gbTicTacToe.Enabled = false;
+                        EndGame(enWinner.Player2);
                         return;
                     }
                         GameStatus.CurrentPlayer = enPlayer.Player1;
@@ -117,13 +115,9 @@ namespace WindowsFormsApps
                     break;
                 }
 
-                if (GameStatus.MoveCount == 9)
+                if (GameStatus.MoveCount == 9 && !GameStatus.GameOver)
                 {
-                    GameStatus.Winner = enWinner.Draw;
-                    label4.Text = "Draw";
-                    label2.Text = "Game Over";
-                    GameStatus.GameOver = true;
-                    gbTicTacToe.Enabled = false;
+                    EndGame(enWinner.Draw);
                     MessageBox.Show("Game ended in a draw!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -132,11 +126,26 @@ namespace WindowsFormsApps
                 MessageBox.Show("Wrong Choice!", "Wrong!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void EndGame(PictureBox Box1, PictureBox Box2, PictureBox Box3)
+        private void EndGame(enWinner Winner)
         {
-            Box1.BackColor = Box2.BackColor = Box3.BackColor = Color.DarkRed;
             GameStatus.GameOver = true;
             label2.Text = "Game Over";
+
+            GameStatus.Winner = Winner;
+            switch (Winner)
+            {
+                case enWinner.Player1:
+                    label4.Text = "Player 1";
+                    break;
+                case enWinner.Player2:
+                    label4.Text = "Player 2";
+                    break;
+                case enWinner.Draw:
+                    label4.Text = "Draw";
+                    break;
+            }
+
+            gbTicTacToe.Enabled = false;
         }
 
         private void ResetpictureBox(PictureBox Box)
