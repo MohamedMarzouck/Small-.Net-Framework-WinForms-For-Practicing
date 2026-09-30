@@ -25,35 +25,37 @@ namespace WindowsFormsApps
         //----------------------------------------------------;
         struct stTimer
         {
-            public short Hours;
-            public short Minutes;
-            public short Seconds;
-            public stTimer(short hours = 0)
+            public int Hours;
+            public int Minutes;
+            public int Seconds;
+            public stTimer(int hours = 0)
             {
                 Hours = hours;
                 Minutes = 0;
                 Seconds = 0;
             }
-        }
-        stTimer TimerUp = new stTimer();
-        private void StartTimerUp()
-        {
-            TimerUp.Seconds++;
 
-            if (TimerUp.Seconds == 60)
+            public stTimer(TimeSpan Time)
             {
-                TimerUp.Seconds = 0;
-                TimerUp.Minutes++;
-
-                if (TimerUp.Minutes == 60)
-                {
-                    TimerUp.Minutes = 0;
-                    TimerUp.Hours++;
-                }
-
+                Hours   = Time.Hours;
+                Minutes = Time.Minutes;
+                Seconds = Time.Seconds;
             }
 
-            lblTimerUp.Text = TimerUp.Hours.ToString().PadLeft(2, '0') + ":" + TimerUp.Minutes.ToString().PadLeft(2, '0') + ":" + TimerUp.Seconds.ToString().PadLeft(2, '0');
+            public string DateString()
+            {
+                return $"{Hours:D2}:{Minutes:D2}:{Seconds:D2}";  // {Hours:00};
+            }
+        }
+        stTimer TimerUp = new stTimer();
+        
+
+
+        private void StartTimerUp()
+        {
+            
+
+            lblTimerUp.Text = TimerUp.DateString();
         }
         private void btnStart_Click(object sender, EventArgs e)
         {

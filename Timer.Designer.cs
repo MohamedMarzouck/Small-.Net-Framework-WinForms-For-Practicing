@@ -98,19 +98,20 @@
             this.groupBox1.Controls.Add(this.btnReset);
             this.groupBox1.Controls.Add(this.lblTimerUp);
             this.groupBox1.Controls.Add(this.btnStop);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 107);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(332, 254);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "TtimerUp";
             // 
             // lblPerCentUp
             // 
             this.lblPerCentUp.AutoSize = true;
             this.lblPerCentUp.Location = new System.Drawing.Point(157, 41);
             this.lblPerCentUp.Name = "lblPerCentUp";
-            this.lblPerCentUp.Size = new System.Drawing.Size(27, 20);
+            this.lblPerCentUp.Size = new System.Drawing.Size(32, 22);
             this.lblPerCentUp.TabIndex = 9;
             this.lblPerCentUp.Text = "00";
             // 
@@ -129,19 +130,20 @@
             this.groupBox2.Controls.Add(this.btnResetDown);
             this.groupBox2.Controls.Add(this.lblTimerDown);
             this.groupBox2.Controls.Add(this.btnStopDown);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(456, 107);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(332, 254);
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "TimerDown";
             // 
             // lblPerCentDown
             // 
             this.lblPerCentDown.AutoSize = true;
             this.lblPerCentDown.Location = new System.Drawing.Point(157, 29);
             this.lblPerCentDown.Name = "lblPerCentDown";
-            this.lblPerCentDown.Size = new System.Drawing.Size(27, 20);
+            this.lblPerCentDown.Size = new System.Drawing.Size(32, 22);
             this.lblPerCentDown.TabIndex = 10;
             this.lblPerCentDown.Text = "00";
             // 
